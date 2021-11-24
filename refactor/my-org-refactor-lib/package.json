@@ -1,0 +1,26 @@
+{
+  "name": "my-org-refactor-lib",
+  "version": "0.0.0",
+  "description": "A blank schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^13.0.3",
+    "@angular-devkit/schematics": "^13.0.3",
+    "typescript": "~4.4.3",
+    "zx": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine": "^3.5.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "my-org-refactor-lib": {
+      "description": "A blank schematic.",
+      "factory": "./my-org-refactor-lib/index#myOrgRefactorLib"
+    },
+    "import-from-lodash-es": {
+      "description": "A blank schematic.",
+      "factory": "./import-from-lodash-es/index#importFromLodashEs"
+    },
+    "use-parse-float": {
+      "description": "A blank schematic.",
+      "factory": "./use-parse-float/index#useParseFloat"
+    }
+  }
+}

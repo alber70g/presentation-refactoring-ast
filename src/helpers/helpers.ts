@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
-// import only what's used from 'lodash-es';
+// import only what's used
+// import from 'lodash-es'
 
 // modify `function() {}` into `() => {}`
 function sanitizeNumbersArray(arr: (string | number)[]) {
@@ -18,4 +19,4 @@ export { sanitizeNumbersArray, parseStringToNumber };
 
 function x() {}
 
-const y = () => {}
+const y = () => {};
