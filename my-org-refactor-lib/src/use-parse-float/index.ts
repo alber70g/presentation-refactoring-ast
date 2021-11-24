@@ -6,8 +6,6 @@ import {
 } from '@angular-devkit/schematics';
 import ts = require('typescript');
 
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
 export function useParseFloat(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     const fileVisitor: FileVisitor = (filePath, entry) => {
@@ -18,7 +16,7 @@ export function useParseFloat(_options: any): Rule {
       ) {
         return;
       }
-      console.log(filePath);
+
       const updater = tree.beginUpdate(filePath);
 
       const sourceFile = ts.createSourceFile(
@@ -47,13 +45,16 @@ export function useParseFloat(_options: any): Rule {
 }
 function findPrefixUnaryExpressions(sourceFile: ts.SourceFile) {
   let foundNodes: ts.PrefixUnaryExpression[] = [];
+
   sourceFile.forEachChild(function nodeVisitor(node) {
     if (ts.isPrefixUnaryExpression(node)) {
       if (node.getFullText(sourceFile).trim().startsWith('+')) {
         foundNodes.push(node);
       }
     }
+
     node.forEachChild(nodeVisitor);
   });
+
   return foundNodes;
 }
