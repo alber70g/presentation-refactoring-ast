@@ -19,7 +19,7 @@ Install (and build) packages in all projects
 ```sh
 cd sample-project && npm install && cd .. \
 cd my-org-refactor-lib && npm install && npm run build && cd .. \
-cd refactor-scripts && npm install && cd ..
+cd refactor-scripts && npm install && npm run build && cd ..
 ```
 
 Execute `@angular-devkit/schematics` migration
