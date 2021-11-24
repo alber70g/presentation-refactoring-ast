@@ -28,11 +28,11 @@ Execute `@angular-devkit/schematics` migration
 > `npm install --global @angular-devkit/schematics-cli`
 
 ```sh
-schematics ./my-org-refactor-lib:use-parse-float --dry-run=false
+cd sample-project && schematics ../my-org-refactor-lib:use-parse-float --dry-run=false
 ```
 
 Execute `ts-morph` migration
 
 ```sh
-node ./refactor-scripts/src/use-lodash-named-imports.js
+cd sample-project && node ../refactor-scripts/src/extract-helpers.js
 ```
